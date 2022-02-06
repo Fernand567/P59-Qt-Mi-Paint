@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Principal</class>
+ <widget class="QMainWindow" name="Principal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1040</width>
+    <height>817</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Principal</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Recursos.qrc">
+    <normaloff>:/Recursos/painting.png</normaloff>:/Recursos/painting.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>1019</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1040</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>&amp;Archivo</string>
+    </property>
+    <addaction name="actionNuevo"/>
+    <addaction name="actionGuardar"/>
+    <addaction name="actionCerrar"/>
+   </widget>
+   <widget class="QMenu" name="menuEstilo">
+    <property name="title">
+     <string>&amp;Estilo</string>
+    </property>
+    <addaction name="actionColor"/>
+    <addaction name="actionGrosor"/>
+   </widget>
+   <widget class="QMenu" name="menuForma">
+    <property name="title">
+     <string>&amp;Forma</string>
+    </property>
+    <addaction name="actionLibre"/>
+    <addaction name="actionLinea"/>
+    <addaction name="actionRectangulos"/>
+    <addaction name="actionCircunferencias"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuEstilo"/>
+   <addaction name="menuForma"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNuevo">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/agregar-archivo.png</normaloff>:/Recursos/agregar-archivo.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Nuevo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionGuardar">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/salvar.png</normaloff>:/Recursos/salvar.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Guardar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionCerrar">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/subiendo.png</normaloff>:/Recursos/subiendo.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Salir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionColor">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/paleta-de-color.png</normaloff>:/Recursos/paleta-de-color.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Color</string>
+   </property>
+  </action>
+  <action name="actionGrosor">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/distribuir.png</normaloff>:/Recursos/distribuir.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Grosor del lapiz</string>
+   </property>
+  </action>
+  <action name="actionLibre">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/lona.png</normaloff>:/Recursos/lona.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Libre</string>
+   </property>
+  </action>
+  <action name="actionLinea">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/menos-linea-recta-horizontal.png</normaloff>:/Recursos/menos-linea-recta-horizontal.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Lineas</string>
+   </property>
+  </action>
+  <action name="actionRectangulos">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/rectangulo.png</normaloff>:/Recursos/rectangulo.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Rectangulos</string>
+   </property>
+  </action>
+  <action name="actionCircunferencias">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/circulo.png</normaloff>:/Recursos/circulo.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Circunferencias</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Recursos/painting.png</file>
+        <file>Recursos/agregar-archivo.png</file>
+        <file>Recursos/circulo.png</file>
+        <file>Recursos/lona.png</file>
+        <file>Recursos/menos-linea-recta-horizontal.png</file>
+        <file>Recursos/rectangulo.png</file>
+        <file>Recursos/salvar.png</file>
+        <file>Recursos/subiendo.png</file>
+        <file>Recursos/paleta-de-color.png</file>
+        <file>Recursos/distribuir.png</file>
+        <file>principal_cat.qm</file>
+        <file>principal_al.qm</file>
+    </qresource>
+</RCC>
