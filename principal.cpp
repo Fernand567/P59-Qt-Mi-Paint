@@ -10,7 +10,7 @@ Principal::Principal(QWidget *parent)
 {
     ui->setupUi(this);
     m_ancho = DEFAULT_ANCHO;
-    m_opcion = 1;
+    opc = 1;
     m_imagen = new QImage(this->size(), QImage::Format_ARGB32_Premultiplied);
     m_imagen->fill(Qt::white);
     m_painter = new QPainter(m_imagen);
@@ -28,35 +28,35 @@ void Principal::mousePressEvent(QMouseEvent *event)
     QPen pincel;
     pincel.setColor(m_color);
     pincel.setWidth(m_ancho);
-    if(m_opcion == 1){m_ptInicial = event->pos();
-    }else if(m_opcion == 2){
+    if(opc == 1){pInicial = event->pos();
+    }else if(opc == 2){
         if(m_toogle){
-            m_ptInicial = event->pos();
+            pInicial = event->pos();
         }else{
-            m_ptFinal = event->pos();
+            pFinal = event->pos();
             m_painter->setPen(pincel);
-            m_painter->drawLine(m_ptInicial, m_ptFinal);
+            m_painter->drawLine(pInicial, pFinal);
             update();
         }
-    }else if(m_opcion == 3){
+    }else if(opc == 3){
             if (m_toogle){
-                m_ptInicial = event->pos();
+                pInicial = event->pos();
             }else {
-                m_ptFinal = event->pos();
+                pFinal = event->pos();
                 QPen pincel;
                 pincel.setColor(m_color);
                 pincel.setWidth(m_ancho);
                 m_painter->setPen(pincel);                
-                m_painter->drawRect(m_ptInicial.x(), m_ptInicial.y(), m_ptFinal.x()-m_ptInicial.x(), m_ptFinal.y()-m_ptInicial.y());
+                m_painter->drawRect(pInicial.x(), pInicial.y(), pFinal.x()-pInicial.x(), pFinal.y()-pInicial.y());
                 update();
             }
-    }else if (m_opcion == 4){
+    }else if (opc == 4){
         if(m_toogle){
-            m_ptInicial = event->pos();
+            pInicial = event->pos();
         }else{
-            m_ptFinal = event->pos();
+            pFinal = event->pos();
             m_painter->setPen(pincel);
-            m_painter->drawEllipse(m_ptInicial.x(), m_ptInicial.y(), 100,100);
+            m_painter->drawEllipse(pInicial.x(), pInicial.y(), pFinal.x()-pInicial.x(), pFinal.y()-pInicial.y());
             update();
         }
     }
@@ -73,16 +73,16 @@ void Principal::paintEvent(QPaintEvent *event)
 
 void Principal::mouseMoveEvent(QMouseEvent *event)
 {
-     if(m_opcion == 1){
-        m_ptFinal = event->pos();
+     if(opc == 1){
+        pFinal = event->pos();
         QPen pincel;
         pincel.setWidth(m_ancho);
         pincel.setColor(m_color);
         m_painter->setPen(pincel);
-        m_painter->drawLine(m_ptInicial, m_ptFinal);
+        m_painter->drawLine(pInicial, pFinal);
     }
     update();
-    m_ptInicial = m_ptFinal;
+    pInicial = pFinal;
 }
 
 
@@ -124,23 +124,23 @@ void Principal::on_actionGrosor_triggered()
 
 void Principal::on_actionLibre_triggered()
 {
-    m_opcion = 1;
+    opc = 1;
 }
 
 void Principal::on_actionLinea_triggered()
 {
-    m_opcion = 2;
+    opc = 2;
     m_toogle = true;
 }
 
 void Principal::on_actionRectangulos_triggered()
 {
-    m_opcion = 3;
+    opc = 3;
     m_toogle = true;
 }
 
 void Principal::on_actionCircunferencias_triggered()
 {
-    m_opcion = 4;
+    opc = 4;
     m_toogle = true;
 }

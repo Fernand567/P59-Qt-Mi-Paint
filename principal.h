@@ -53,10 +53,10 @@ private:
     Ui::Principal *ui;
     QImage *m_imagen;
     QPainter *m_painter;
-    QPoint m_ptInicial;
-    QPoint m_ptFinal;
+    QPoint pInicial;
+    QPoint pFinal;
     int m_ancho;
-    int m_opcion;
+    int opc;
     bool m_toogle = true;
     QColor m_color = Qt::black;
 };
